@@ -1,102 +1,76 @@
-:root {
-    --bg-top: #ff66b3;
-    --bg-bottom: #ffcce6;
-    --card: rgba(255, 255, 255, 0.35);
-    --accent: #ff3399;
-    --text-main: #5b0033;
-    --text-light: #80004d;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 40px;
-    background-attachment: fixed;
-  }
-  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ff66b3 0%, #ffcce6 100%);
+  background-attachment: fixed;
+  color: #5b0033;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 720px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(255, 51, 153, 0.35);
+}
+
+.badge {
+  color: #80004d;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.poem h1 {
+  color: #ff3399;
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.poem p {
+  color: #80004d;
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.audio-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.audio-controls button {
+  background-color: white;
+  color: #ff3399;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.audio-controls button:hover {
+  background-color: #ff3399;
+  color: white;
+}
+
+@media (max-width: 600px) {
   .card {
-    background: var(--card);
-    border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(255, 51, 153, 0.3);
-    backdrop-filter: blur(12px);
-    padding: 40px;
-    max-width: 720px;
-    width: 100%;
-    text-align: left;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 24px;
   }
-  
-  .badge {
-    color: var(--text-light);
-    font-weight: 700;
-    margin-bottom: 16px;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-  }
-  
   .poem h1 {
-    font-family: 'Playfair Display', serif;
-    color: var(--accent);
-    font-size: 34px;
-    margin-bottom: 18px;
-    text-shadow: 1px 2px 6px rgba(255, 255, 255, 0.4);
+    font-size: 26px;
   }
-  
-  .poem p.line {
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: var(--text-light);
-    line-height: 1.6;
+  .poem p {
+    font-size: 16px;
   }
-  
-  .poem p.spacer {
-    margin: 18px 0;
-  }
-  
-  .audio-controls {
-    margin-top: 24px;
-    text-align: center;
-  }
-  
-  .audio-controls button {
-    background-color: white;
-    color: var(--accent);
-    border: none;
-    border-radius: 12px;
-    padding: 10px 16px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-  
-  .audio-controls button:hover {
-    background-color: var(--accent);
-    color: white;
-  }
-  
-  @media (max-width: 600px) {
-    body {
-      padding: 20px;
-    }
-    .card {
-      padding: 24px;
-    }
-    .poem h1 {
-      font-size: 26px;
-    }
-    .poem p.line {
-      font-size: 16px;
-    }
-  }
-  
+}
